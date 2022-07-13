@@ -13,7 +13,7 @@ export const Discover = () => {
             <div className="nft__discover-left">
                 <h1>Discover Hidden Gems💎</h1>
                 <p>User friendly rarity scores and rankings covering 1876 collections. Read more about our {' '}
-                    <a className='nft__discover-left-link'>rarity model.</a>
+                    <a className='nft__discover-left-link' href='/'>rarity model.</a>
                 </p>
                 <div className='nft__discover-left-search'>
                     <input type="text" placeholder='Search Collections' onFocus={()=>setOpen(true)} onBlur={()=>setOpen(false)} />

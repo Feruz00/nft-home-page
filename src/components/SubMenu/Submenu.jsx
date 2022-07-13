@@ -1,12 +1,6 @@
 import React, { useState } from 'react'
 import { Theme } from '../../theme'
 import './Submenu.css'
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-
-import AnalyticsIcon from '@mui/icons-material/Analytics';
-import StoreIcon from '@mui/icons-material/Store';
-import LeaderboardIcon from '@mui/icons-material/Leaderboard';
-import EmojiEvents from '@mui/icons-material/EmojiEvents';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
