@@ -19,6 +19,10 @@ import AnalyticsIcon from '@mui/icons-material/Analytics';
 import StoreIcon from '@mui/icons-material/Store';
 import LeaderboardIcon from '@mui/icons-material/Leaderboard';
 import EmojiEvents from '@mui/icons-material/EmojiEvents';
+import { Theme } from '../../theme';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import LiveTvIcon from '@mui/icons-material/LiveTv';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const links = [
     {name: 'CryptoPunks', url: cryptoPunks}, 
@@ -82,11 +86,12 @@ const Menu = ()=>{
     )
 }
 
+
 const Navbar = () => {
-    const [darkMode, setDarkMode] = useState(false)
+    const {darkMode, setDarkMode, openSubMenu, setOpenSubmenu} = Theme()
     const [openSearch, setOpenSearch] = useState(false)
     const [openLang, setOpenLang] = useState(false)
-
+    
     const handleChangeTheme = ()=>{
         setDarkMode(!darkMode)
         document.documentElement.setAttribute('data-theme', darkMode ? 'light' : 'dark' )
@@ -107,7 +112,13 @@ const Navbar = () => {
         <div className='nft__navbar-links'>
             <Menu />
         </div>
-
+        <div className='nft__navbar-dropdown'>
+            {
+                openSubMenu ?
+                <ChevronRightIcon fontSize='large' onClick={()=>setOpenSubmenu(!openSubMenu)} />:
+                <KeyboardArrowDownIcon fontSize='large' onClick={()=>setOpenSubmenu(!openSubMenu)} />
+            }
+        </div>
         <div className='nft__navbar-search'>
                 <div className={`nft__navbar-search-container ${openSearch && 'nft__navbar-search-popup'}`}>
                     <div className='nft__navbar-search-head'>
@@ -180,7 +191,26 @@ const Navbar = () => {
                 }
                 
             </div>
-            <AccountCircleIcon/>
+            <div className='nft__navbar-right_icon'>
+                <AccountCircleIcon className={`nft__navbar-right_icon-icon `} />
+                
+                <div className='nft__navbar-right_icon-list'>
+                    <div className='nft__navbar-right_icon-list-item'>
+                        <AccountCircleIcon className='nft__navbar-right_icon-list-item-logo'/>
+                        
+                        <p>My profile</p>
+                    </div>
+                    <div className='nft__navbar-right_icon-list-item'>
+                        <LiveTvIcon className='nft__navbar-right_icon-list-item-logo'/>
+                        <p>Watch List</p>
+                    </div>
+                    
+                    
+                    
+                </div>
+        
+            </div>
+            {/* <AccountCircleIcon/> */}
         </div>
     </div>
   )

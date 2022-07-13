@@ -1,3 +1,6 @@
+p{
+    margin-bottom: 0 !important;
+}
 .ntf__navbar{
     width: 100%;
     height: 4rem;
@@ -13,6 +16,7 @@
 
 .nft__navbar-logo svg{
     color: var(--text-color);
+    cursor: pointer;
 }
 
 .nft__navbar-search, .nft__navbar-right, .nft__navbar-links,.nft__navbar-right{
@@ -333,6 +337,60 @@
 .nft__navbar-right_language-icon-open{
     transform: rotateX(180deg);
 }
+
+
+.nft__navbar-right_icon-list{
+    display: none;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.nft__navbar-right_icon{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.nft__navbar-right_icon:hover .nft__navbar-right_icon-list{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--table-bg-color);
+    color: var(--text-color);
+    box-shadow: var(--common-box-shadow);
+    display: flex;
+    flex-direction: column;
+   
+}
+.nft__navbar-right_icon-list-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    white-space: nowrap;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 1rem;
+}
+.nft__navbar-right_icon-list-item:hover{
+    background-color: var(--page-color);
+}
+.nft__navbar-right_icon-list-item p{
+    margin-left: 13px;
+}
+
+.nft__navbar-dropdown{
+    display: none;
+    height: 100%;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.nft__navbar-dropdown > *{
+    padding: 0;
+    color: var(--text-color);
+    /* transform: translateY(10%); */
+}
+
 @media screen and (max-width: 1260px) {
     .nft__navbar-links{
         display: none;
@@ -340,5 +398,9 @@
     .nft__navbar-search{
         flex: 1;
         justify-content: center;
+    }
+    .nft__navbar-dropdown{
+        display: flex;
+        align-items: center;
     }
 }

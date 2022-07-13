@@ -4,3 +4,57 @@
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
+a:link{
+    text-decoration: none;
+}
+.btn{
+    padding: 1rem 2rem;
+    border-radius: 70px;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 600;
+}
+.btn-primary{
+    color: var(--tab-button-text-color);
+    background-color: var(--main-color);
+}
+.btn-primary:hover{
+    background-color: var(--main-color-deep);
+    color: var(--button-text-color);
+}
+.btn-secondary{
+    background-color: #535572;
+    border: 1px solid var(--button-text-color);
+    color: var(--button-text-color);
+}
+.btn-secondary:hover{
+    background-color: var(--button-text-color);
+    color: var(--main-color);
+}
+.btn-light-primary{
+    background-color: var(--main-color-10);
+    color: var(--main-color);
+}
+.btn-light-primary:hover{
+    background-color: var(--main-color-10);
+    color: var(--main-color);
+}
+
+.btn-light-secondary{
+    background-color: var(--card-bg-color);
+    color: var(--dark-gray);
+}
+.btn-light-secondary:hover{
+    color: var(--info-text-color);
+    background-color: var(--gray);
+}
+.btn-light{
+    background: var(--card-bg-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+.btn-light:hover{
+    background-color: var(--main-color-deep);
+    color: var(--button-text-color);
+}
